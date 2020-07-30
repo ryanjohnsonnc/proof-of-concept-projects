@@ -285,6 +285,7 @@ textarea {
   background-image: url('/img/snazzy-image.png');
   background-size: cover;
   background-position: 50% 50%;
+  transition: all .1s linear;
 }
 
 .background-map::before {
@@ -322,6 +323,7 @@ textarea {
 
 .slide {
   text-align: center;
+  outline: none
 }
 
 .phone {
@@ -354,10 +356,12 @@ textarea {
   top: 24px;
   bottom: 33px;
   z-index: 3;
-  background-image: url('/img/phone-map.png');
+  background-image: url('/img/snazzy-image.png');
   background-size: cover;
   border-radius: 20px;
   overflow: hidden;
+  background-position: 50% 50%;
+  transition: all .1s linear;
 }
 
 .screen {

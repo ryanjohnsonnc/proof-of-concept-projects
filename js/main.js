@@ -12,20 +12,25 @@
       arrows: false,
       slidesToShow: 6,
       centerMode: true,
-      variableWidth: true,
-      focusOnSelect: true,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      touchMove: false,
+      swipeToSlide: false,
+      // focusOnSelect: true,
       autoplay: true,
     });
 
     $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
       var slideData =  currentSlide + 1;
       var phoneScreens = $('.screen');
-      var movement = Math.floor(Math.random() * 31) + 50 + "%";
-
+      var movement1 = Math.floor(Math.random() * 61) + 50 + "%";
+      var movement2 = Math.floor(Math.random() * 61) + 50 + "%";
+      var movement = movement1 + " " + movement2;
       phoneScreens.removeClass('active');
       $('.screen--' + slideData).addClass('active'); 
       
-      $('#clients').css("background-position-x", movement );
+      $('.phone-screen').css("background-position", movement );
+      $('.background-map').css("background-position", movement );
    });
 
     // $('.slider').flickity({
