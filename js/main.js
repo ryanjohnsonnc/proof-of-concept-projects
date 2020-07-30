@@ -21,7 +21,7 @@
     });
 
     $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-      var slideData =  currentSlide + 1;
+      var slideData =  nextSlide + 1;
       var phoneScreens = $('.screen');
       var movement1 = Math.floor(Math.random() * 61) + 50 + "%";
       var movement2 = Math.floor(Math.random() * 61) + 50 + "%";
@@ -32,18 +32,6 @@
       $('.phone-screen').css("background-position", movement );
       $('.background-map').css("background-position", movement );
    });
-
-    // $('.slider').flickity({
-    //   // options
-    //   cellAlign: 'center',
-    //   contain: false,
-    //   draggable: true,
-    //   wrapAround: true,
-    //   autoPlay: false,
-    //   prevNextButtons: false,
-    //   pageDots: false,
-    //   percentPosition: false,
-    // });
   });
     
   
