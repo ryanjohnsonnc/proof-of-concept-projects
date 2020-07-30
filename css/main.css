@@ -266,12 +266,13 @@ textarea {
   margin-bottom: 200px;
   padding-bottom: 300px;
   background-image: url('/img/snazzy-image.png');
-  background-size: 100%;
+  background-size: cover;
   background-position: 50% 50%;
   position: relative;
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
+  transition: .2s ease linear;
 }
 
 #clients .slider-wrapper {
@@ -288,7 +289,7 @@ textarea {
 .slick-slide { will-change: transform; }
 
 #clients .slide {
-  padding: 0px 32px;
+  padding: 0px 24px;
 }
 
 .slide.is-selected {
@@ -324,13 +325,15 @@ textarea {
 
 .phone-screen {
   position: absolute;
-  left: 30px;
-  right: 30px;
-  top: 30px;
-  bottom: 30px;
+  left: 23px;
+  right: 16px;
+  top: 24px;
+  bottom: 33px;
   z-index: 3;
   background-image: url('/img/phone-map.png');
   background-size: cover;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .screen {

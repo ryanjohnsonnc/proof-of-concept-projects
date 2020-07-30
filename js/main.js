@@ -20,9 +20,12 @@
     $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
       var slideData =  currentSlide + 1;
       var phoneScreens = $('.screen');
+      var movement = Math.floor(Math.random() * 31) + 50 + "%";
 
       phoneScreens.removeClass('active');
-      $('.screen--' + slideData).addClass('active');       
+      $('.screen--' + slideData).addClass('active'); 
+      
+      $('#clients').css("background-position-x", movement );
    });
 
     // $('.slider').flickity({
