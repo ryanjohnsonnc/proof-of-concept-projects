@@ -10,6 +10,127 @@
   margin-right: auto;
   transition: .2s ease linear;
   position: relative;
+
+  .slider-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    left: 0px;
+    height: auto;
+    z-index: 1;
+    padding: 30px 0px;
+    background-color: rgba(57, 172, 172, .8);
+  }
+
+  .slide {
+    padding: 0px 16px;
+    text-align: center;
+    outline: none;
+
+    img {
+      max-width: 160px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+  }
+
+  .phone {
+    width: 363px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+
+    .phone-image {
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .phone-screen {
+      position: absolute;
+      left: 23px;
+      right: 16px;
+      top: 24px;
+      bottom: 33px;
+      z-index: 3;
+      background-image: url('/img/snazzy-image.png');
+      background-size: cover;
+      border-radius: 20px;
+      overflow: hidden;
+      background-position: 50% 50%;
+      transition: all .1s linear;
+    }
+
+    .screen {
+      opacity: 0;
+      transition: opacity .3s ease;
+      overflow: hidden;
+
+      .search-bar {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        right: 12px;
+        border-radius: 10px;
+        background-color: white;
+        padding: 12px;
+        text-align: left;
+      }
+
+      .search-icon {
+        position: absolute;
+        top: 25%;
+        width: 150px;
+        left: calc(50% - 75px);
+      }
+      
+      .search-cards {
+        position: absolute;
+        bottom: 0px;
+        left: 12px;
+        right: 12px;
+        height: auto;
+
+        .card {
+          background-color: white;
+          border-radius: 10px;
+          margin-bottom: 12px;
+          padding: 6px;
+          text-align: left;
+          transform: translate(-50%, 0px);
+          transition: all .3s ease;
+
+          &.card--2 {
+            transition-delay: .1s;
+          }
+          
+          &.card--3 {
+            transition-delay: .2s;
+          }
+
+          p {
+            font-size: 14px;
+            margin-bottom: 6px;
+            margin-top: 0px;
+          }
+        }
+      }
+
+      &.active {
+        opacity: 1;
+
+        .search-cards {
+          .card {
+            transform: translate(0px);  
+          }
+        }
+      }
+    }    
+  }
 }
 
 .background-map {
@@ -24,29 +145,18 @@
   background-size: cover;
   background-position: 50% 50%;
   transition: all .1s linear;
-}
 
-.background-map::before {
-  content: '';
-  display: block;
-  position: absolute;
-  z-index: 2;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background: transparent radial-gradient(closest-side at 50% 50%, #FFFFFF00 0%, #FFFFFF00 47%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
-}
-
-#clients .slider-wrapper {
-  position: absolute;
-  width: 100%;
-  top: 100px;
-  left: 0px;
-  height: auto;
-  z-index: 1;
-  padding: 30px 0px;
-  background-color: rgba(57, 172, 172, .8);
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: transparent radial-gradient(closest-side at 50% 50%, #FFFFFF00 0%, #FFFFFF00 47%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+  }
 }
 
 .slick-slide { 
@@ -55,117 +165,5 @@
   width: 100px;
 }
 
-#clients .slide {
-  padding: 0px 16px;
-  text-align: center;
-  outline: none;
-}
 
-.slide.is-selected {
-
-}
-
-.slide img {
-  max-width: 160px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.phone {
-  text-align: center;
-  position: relative;
-  z-index: 3;
-}
-
-.phone {
-  width: 363px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.phone .phone-image {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  z-index: 2;
-}
-
-.phone-screen {
-  position: absolute;
-  left: 23px;
-  right: 16px;
-  top: 24px;
-  bottom: 33px;
-  z-index: 3;
-  background-image: url('/img/snazzy-image.png');
-  background-size: cover;
-  border-radius: 20px;
-  overflow: hidden;
-  background-position: 50% 50%;
-  transition: all .1s linear;
-}
-
-.screen {
-  opacity: 0;
-  transition: opacity .3s ease;
-  overflow: hidden;
-}
-
-.screen.active {
-  opacity: 1;
-}
-
-.search-bar {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  right: 12px;
-  border-radius: 10px;
-  background-color: white;
-  padding: 12px;
-  text-align: left;
-}
-
-.search-icon {
-  position: absolute;
-  top: 25%;
-  width: 150px;
-  left: calc(50% - 75px);
-}
-
-.search-cards {
-  position: absolute;
-  bottom: 0px;
-  left: 12px;
-  right: 12px;
-  height: auto;
-}
-
-.card {
-  background-color: white;
-  border-radius: 10px;
-  margin-bottom: 12px;
-  padding: 6px;
-  text-align: left;
-  transform: translate(-50%, 0px);
-  transition: all .3s ease;
-}
-
-.card--2 {
-  transition-delay: .1s;
-}
-
-.card--3 {
-  transition-delay: .2s;
-}
-
-.active .card {
-  transform: translate(0px);
-}
-
-.card p {
-  font-size: 14px;
-  margin-bottom: 6px;
-  margin-top: 0px;
-}
 
