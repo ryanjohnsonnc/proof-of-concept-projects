@@ -1,10 +1,8 @@
 {
-  "name": " ",
+  "name": "Proof of concept project",
   "version": "0.0.1",
-  "description": "",
-  "keywords": "",
-  "license": "",
-  "author": "",
+  "license": "MIT",
+  "author": "Ryan Johnson",
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html --open",
